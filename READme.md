@@ -16,7 +16,7 @@
 	return data[0];
 }
 ```
-1. How to manipulate the DOM using data gotten from the Api endpoint
+2. How to manipulate the DOM using data gotten from the Api endpoint
 ```JS
 	details.innerHTML = `
 
