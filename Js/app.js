@@ -1,11 +1,15 @@
 const cityForm = document.querySelector('main form');
 const card = document.querySelector('main .card');
 const details = document.querySelector('main .details');
+const icon = document.querySelector('main .icon img');
+const time = document.querySelector('main .time');
+
 
 
 const updateUI = (data) => {
 	// const cityDetails = data.cityDetails;
 	// const weather = data.weather;
+	// console.log(data);
 
 	// Destructure Property: its a better way to write the above
 	const {cityDetails, weather} = data;
@@ -20,19 +24,42 @@ const updateUI = (data) => {
 
 				<h5 class="my-3">${cityDetails.EnglishName}</h5>
 
-				<h5 class="">02:50pm</h5>
-
 				<div class="my-3">${weather.IconPhrase}</div>
 
 				<div class="display-4 my-4">
-					<span>${celsius}</span>
-					<span>&deg;C</span>
+					<span>${celsius}</span><span>&deg;C</span>
 				</div> `
 
+	// Updating the image and icon 
+	// let timeImg = null;
+	const iconSrc = `image/icons/${weather.WeatherIcon}.svg`;
+
+	// Image
+	// Using ternary operator instead of the if {} else {} check
+
+	const timeImg = weather.IsDaylight ? 'image/day.svg' : 'image/night.svg';
+
+	// if(weather.IsDaylight){
+	// 	timeImg = 'image/day.svg';
+	// } else {
+	// 	timeImg = 'image/night.svg';
+	// }
+	
+	time.setAttribute('src', timeImg);
+
+	// Icon
+	icon.setAttribute('src', iconSrc);
+	icon.setAttribute('title', weather.IconPhrase);
+
+
+	// removing and adding the card			
 	if(card.classList.contains('d-none')) {
 		card.classList.remove('d-none');
 	}
+
 }
+
+
 
 const updateCity = async (city) => {
 	const cityDetails = await getCity(city);

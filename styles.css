@@ -16,8 +16,21 @@ body {
 
 .container {
 	max-width: 400px;
+	transform: scale(0.9);
 }
 
 main form, main h2 {
 	letter-spacing: 0em;
+}
+
+main .icon {
+	position: relative;
+	top: -50px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+main .icon:hover {
+	transform: scale(1.2);
 }
