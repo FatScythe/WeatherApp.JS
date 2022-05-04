@@ -10,7 +10,7 @@ const getCity = async (city) => {
 
 // get weather information
 const getWeather = async (id) => {
-	const response = await fetch(`http://dataservice.accuweather.com/forecasts/v1/hourly/1hour/${id}?apikey=${key}`);
+	const response = await fetch(`https://dataservice.accuweather.com/forecasts/v1/hourly/1hour/${id}?apikey=${key}`);
 	const data = await response.json();
 
 	return data[0];

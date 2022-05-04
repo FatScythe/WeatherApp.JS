@@ -28,7 +28,7 @@
 					<span>${celsius}</span><span>&deg;C</span>
 				</div> `
 ```
-#### Link to the live website: [WeatherApp](https://outkeeper.netlify.app/ "Outkeeper live site")
+#### Link to the live website: [WeatherApp](https://devweatherappjs.netlify.app/ "Outkeeper live site")
 
 #### Design Image
 #### Desktop View
