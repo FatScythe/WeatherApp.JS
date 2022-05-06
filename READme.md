@@ -35,6 +35,6 @@
 ![WeatherAppSS](image/weatherAppSS.png "Desktop View")
 
 #### Future Feature
-#### > Add Local Storage
+> #### Add Local Storage
 
 #### Credits: NetNinja and Scythe
